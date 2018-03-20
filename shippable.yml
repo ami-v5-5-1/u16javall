@@ -7,7 +7,12 @@ jdk:
   - oraclejdk8
  
 build:
-
+  
+  pre_ci_boot:
+    image_name: drydock/u14javall
+    image_tag: v5.5.1
+    pull: true
+    
   ci:
     - java -version
     - echo $SHIPPABLE_JDK_VERSION
